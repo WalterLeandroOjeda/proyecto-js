@@ -1,1 +1,1 @@
-alert("Bienvenido a The Manga Store 🎉🎉")
+alert("Bienvenido a The Manga Store 🎉🎉");
