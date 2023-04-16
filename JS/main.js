@@ -1,47 +1,59 @@
 alert("Bienvenido a The Manga Store 🎉🎉");
-let comprarManga = confirm("¿Te gustaria comprar un manga?");
-if (comprarManga){
-    queGenero= prompt("¿Que genero estarias buscando? \n Ingrese 's' para Shojo  'ss' para Shonnen 'i' para Isekai")
-};
-if('s' === queGenero){
-    cual= prompt("¿De cuales de estos titulos gustaría comprar? \n Ao Haru Ride 'Ao' Nana 'Na' Nisekoi 'Ni'")
-}
-if('ss' === queGenero){
-    cual= prompt("¿De cuales de estos titulos gustaría comprar? \n One Piece 'One' Kimetsu No Yaiba 'Ki' Fairy Tail 'Fa'")
-}
-if('i' === queGenero){
-    cual= prompt("¿De cuales de estos titulos gustaría comprar? \n No Game No Life 'No' Sword Art Online 'Sao' Inuyasha 'Inu'")
-}
-if('ao' === cual){
-    cuantos= Number(prompt("¿Cuantos tomos gustarias? Seleccione del 1 al 13"))
-}
-if('na' === cual){
-    cuantos= Number(prompt("¿Cuantos tomos gustarias? Seleccione del 1 al 21"))
-}
-if('ni' === cual){
-    cuantos= Number(prompt("¿Cuantos tomos gustarias? Seleccione del 1 al 25"))
-}
-if('one' === cual){
-    cuantos= Number(prompt("¿Cuantos tomos gustarias? Seleccione del 1 al 89"))
-}
-if('ki' === cual){
-    cuantos= Number(prompt("¿Cuantos tomos gustarias? Seleccione del 1 al 23"))
-}
-if('fa' === cual){
-    cuantos= Number(prompt("¿Cuantos tomos gustarias? Seleccione del 1 al 63"))
-}
-if('no' === cual){
-    cuantos= Number(prompt("¿Cuantos tomos gustarias? Seleccione del 1 al 7"))
-}
-if('sao' === cual){
-    cuantos= Number(prompt("¿Cuantos tomos gustarias? Seleccion del 1 al 27"))
-}
-if('inu' === cual){
-    cuantos= Number(prompt("¿Cuantos tomos gustarias? Seleccione dle 1 al 56"))
-}
-if(cuantos>=5){
-    alert("En breve estaremos comunicandonos con usted")
-}
-else if(cuantos<=4){
-    alert("La compra minima son de 5 ejemplares")
-}
+let comprarManga = prompt("¿Desea comprar manga? (si/no)").toLocaleLowerCase();
+switch (comprarManga) {
+    case "no":
+    alert("Gracias por visitarnos. ¡Vuelve pronto!");
+    break;
+    case "si":
+    let genero = prompt("Tenemos los siguientes géneros: Shojo, Shonnen e Isekai").toLocaleLowerCase();
+    switch (genero) {
+        case "shojo":
+        let shojoTitulo = prompt("Seleccione el título que gustaría: Ao Haru Ride, Nana o Nisekoi").toLocaleLowerCase();
+        switch (shojoTitulo) {
+        case "ao haru ride":
+            let aoHaruRideTomos = prompt("¿Cuántos tomos gustaría?");
+            break;
+        case "nana":
+            let nanaTomos = prompt("¿Cuántos tomos gustaría?");
+            break;
+        case "nisekoi":
+            let nisekoiTomos = prompt("¿Cuántos tomos gustaría?");
+            break;
+        default:
+            alert("Título no válido.");
+            break;
+        }
+        break;
+        case "shonnen":
+        let shonnenTitulo = prompt("Seleccione el título que gustaría: One Piece, Kimetsu no Yaiba o Fairy Tail").toLocaleLowerCase();
+        switch (shonnenTitulo) {
+        case "one piece":
+            let onePieceTomos = prompt("¿Cuántos tomos gustaría?");
+            break;
+        case "kimetsu no yaiba":
+            let kimetsuTomos = prompt("¿Cuántos tomos gustaría?");
+            break;
+        case "fairy tail":
+            let fairyTailTomos = prompt("¿Cuántos tomos gustaría?");
+            break;
+        default:
+            alert("Título no válido.");
+            break;
+        }
+        break;
+        case "isekai":
+        let isekaiTitulo = prompt("Seleccione el título que gustaría: No Game No Life, Sword Art Online (SAO) o Inuyasha").toLocaleLowerCase();
+        switch (isekaiTitulo) {
+        case "no game no life":
+            let noGameNoLifeTomos = prompt("¿Cuántos tomos gustaría?");
+            break;
+        case "sword art online":
+            let saoTomos = prompt("¿Cuántos tomos gustaría?");
+            break;
+        case "inuyasha":
+            let inuyashaTomos = prompt("¿Cuántos tomos gustaría?");
+            break;
+        default:
+            alert("Título no válido.");
+            break;
+        }}}
